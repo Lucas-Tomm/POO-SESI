@@ -53,22 +53,24 @@ def media_da_turma():
         soma = soma + estudante.media()
     print(f"\nMédia da turma: {soma / len(estudantes):.2f}")    
 
-    def menu():
-        while True:
-            print("\n1 - Cadastrar estudantes")
-            print("2 - Listar estudantes")
-            print("3 - Média da turma")
-            print("0 - Sair")
+def menu():
+    while True:
+        print("\n1 - Cadastrar estudantes")
+        print("2 - Listar estudantes")
+        print("3 - Média da turma")
+        print("0 - Sair")
 
-            opcao = input("Opção: ")
+        opcao = input("Opção: ")
 
-            if opcao == "1":
-                cadastrar()
-            elif opcao == "2":
-                listar()
-            elif opcao == "3":
-                media_da_turma()
-            elif opcao == "0":
-                break
-            else:
-                print("Opção inválida. Tente novamente.")
+        if opcao == "1":
+            cadastrar()
+        elif opcao == "2":
+            listar()
+        elif opcao == "3":
+            media_da_turma()
+        elif opcao == "0":
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+menu()
